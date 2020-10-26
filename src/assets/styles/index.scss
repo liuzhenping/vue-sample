@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+.full-container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.full-width {
+  width: 100%
+}
+
+.full-height {
+  height: 100%
+}
+
+.flex {
+  display: flex
+}
+
+.box-card{
+  min-height: 825px;
+  padding: 10px 20px;
+}
+
+
+
+
+

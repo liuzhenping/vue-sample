@@ -1,18 +1,65 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <el-card class="box-card">
+    <div class="func-card">
+      <el-row :gutter="40">
+        <el-col :span="6">
+          <router-link to="booking/create">
+            <el-button class="btn-block">
+              {{ $t('CURD') }}
+            </el-button>
+          </router-link>
+        </el-col>
+        <el-col :span="6">
+          <router-link to="demo/emit">
+            <el-button class="btn-block">
+              Emit
+            </el-button>
+          </router-link>
+        </el-col>
+        <el-col :span="6">
+          <router-link to="demo/ref">
+            <el-button class="btn-block">
+              Refs
+            </el-button>
+          </router-link>
+        </el-col>
+        <el-col :span="6">
+          <router-link to="demo/vuex">
+            <el-button class="btn-block">
+              Vuex
+            </el-button>
+          </router-link>
+        </el-col>
+      </el-row>
+    </div>
+  </el-card>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+  data() {
+    return {}
+  },
+  created() {},
+  methods: {}
 }
 </script>
+
+<style lang="scss" scoped>
+    .func-card{
+        background-color: #ebf5ff;
+        padding: 2.5rem;
+
+        .el-col{
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .btn-block{
+        width: 100%;
+    }
+</style>
